@@ -1,0 +1,49 @@
+.carousel-item{
+    height: 35em;
+} /* Altura do caroulsel*/
+
+.carousel-item img{
+width: 100%;
+}
+
+#sidebar{
+    width: 250px;
+    padding: 20px;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.main-content{
+     margin-left: 270px; /* Espaço para a sidebar */
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card{
+    margin: 20px;
+    width: 10rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+} /*Uniformiza o tamanho das imagens presentes nos cards*/
