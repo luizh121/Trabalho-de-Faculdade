@@ -6,7 +6,7 @@
 width: 100%;
 }
 
-#sidebar{
+.sidebar{
     width: 250px;
     padding: 20px;
     position: sticky;
