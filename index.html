@@ -99,9 +99,13 @@
 
  <main class="container my-5">
 
-<div class="sidebar"> <!--Sidebar-->
+  <div class="d-flex">
+
+<aside class="sidebar row"> <!--Sidebar-->
   <h2>Teste</h2>
-</div>
+  <a>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi voluptatem, repellendus sunt nesciunt totam voluptatibus enim vitae accusamus dolores, consectetur architecto impedit voluptates nihil dolor quae expedita maxime eius cumque.</a>
+
+</aside>
 
     <div class="main-content"> 
 
@@ -150,11 +154,11 @@
     <hr class="my-5">
 
     <h2 class="mb-4">Novidades</h2>
-        
-    <div class="mb-3"> <!--Filtro por Categoria-->
-      <label for="categoriaFiltro" class="form-label">Filtrar por Categoria</label>
-      <select class="form-select w-auto" id="categoriaFiltro">
-        <option value="">Todas</option>
+
+        <div class="mb-3">
+      <label for="categoriaFiltro" class="Default select example">Filtrar por Categoria</label>
+       <select class="form-select w-auto" id="categoriaFiltro">
+        <option selected>Todas</option>
         <option value="ficcao">Ficção</option>
         <option value="romance">Romance</option>
         <option value="tecnico">Técnico</option>
@@ -162,7 +166,7 @@
         <option value="filosofia">Filosofia</option>
       </select>
     </div>
-        
+
     <div class="row row-cols-1 row-cols-md-4 g-4" id="novidades">
       <div class="col">
         <div class="card h-100">
@@ -187,6 +191,8 @@
         </div>
       </div>
       <!-- Adicione mais 6 cards semelhantes -->
+    </div>
+
     </div>
 
     </div>
@@ -218,12 +224,12 @@
           <h5>Newsletter</h5>
           <form class="d-flex flex-column flex-sm-row gap-2">
             <input type="email" class="form-control" placeholder="Seu e-mail" required>
-            <button type="submit" class="btn btn-primary">Assinar</button>
+            <button type="submit" class="btn btn-primary mt-auto">Assinar</button>
           </form>
         </div>
       </div>
       <div class="text-center mt-4">
-        <small>&copy; 2025 Biblioteca Virtual. Todos os direitos reservados.</small>
+        <small>&copy; 2025 (Nome do Site). Todos os direitos reservados.</small>
       </div>
     </div>
 </footer>
