@@ -6,13 +6,14 @@
 width: 100%;
 }
 
+
 .sidebar{
     width: 250px;
     padding: 20px;
-    position: flex;
-    flex-direction: column;
     left: 0;
     top: 0;
+    position: flex;
+    flex-direction: column;
 }
 
 .main-content{
@@ -48,3 +49,8 @@ width: 100%;
   height: 200px;
   object-fit: cover;
 } /*Uniformiza o tamanho das imagens presentes nos cards*/
+
+
+
+
+
