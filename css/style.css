@@ -1,5 +1,5 @@
 .carousel-item{
-    height: 50em;
+    height: 35em;
 } /* Altura do caroulsel*/
 
 .carousel-item img{
@@ -16,7 +16,7 @@ width: 100%;
 }
 
 .main-content{
-     margin-left: 200px; /* Espaço para a sidebar */
+     margin-left: 20px; /* Espaço para a sidebar */
     padding: 20px;
 }
 
