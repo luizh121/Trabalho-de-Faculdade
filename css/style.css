@@ -9,13 +9,14 @@ width: 100%;
 .sidebar{
     width: 250px;
     padding: 20px;
-    position: sticky;
+    position: flex;
+    flex-direction: column;
     left: 0;
     top: 0;
 }
 
 .main-content{
-     margin-left: 270px; /* Espaço para a sidebar */
+     margin-left: 200px; /* Espaço para a sidebar */
     padding: 20px;
 }
 
