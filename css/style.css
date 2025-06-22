@@ -16,40 +16,36 @@ width: 100%;
     flex-direction: column;
 }
 
-.main-content{
-     margin-left: 20px; /* Espaço para a sidebar */
-    padding: 20px;
-}
-
 .sidebar h2 {
     margin-top: 0;
 }
 
+.sidebar button:hover{
+    background-color:  #198754;
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
 }
 
-.sidebar li {
-    margin-bottom: 10px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
+.main-content{
+    margin-left: 20px; /* Espaço para a sidebar */
+    padding: 20px;
 }
 
 .card{
-    margin: 20px;
-    width: 10rem;
+    width: 12rem; 
 }
 
-.card-img-top {
+.card-img-top{
   height: 200px;
-  object-fit: cover;
+  object-fit: cover; 
 } /*Uniformiza o tamanho das imagens presentes nos cards*/
 
+.card-img-top:hover{
+    object-fit: contain;
+} /*Ao passar o mouse em um card, faz com que a imagem completa seja mostrada, independente de suas proporções.*/
+
+.card-title{
+  text-align: center;
+} 
 
 
 
