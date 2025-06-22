@@ -10,8 +10,10 @@
 
 <body>
 
+
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
+      
       <a class="navbar-brand" href="#">Navbar scroll</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,7 +43,7 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
       </div>
     </div>
@@ -99,11 +101,44 @@
 
  <main class="container my-5">
 
-  <div class="d-flex">
+  <div class="d-flex"> <!--Alinha o sidebar com o conteúdo principal-->
 
-<aside class="sidebar row"> <!--Sidebar-->
-  <h2>Teste</h2>
-  <a>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi voluptatem, repellendus sunt nesciunt totam voluptatibus enim vitae accusamus dolores, consectetur architecto impedit voluptates nihil dolor quae expedita maxime eius cumque.</a>
+<aside class="sidebar row col-md-3"> <!--Sidebar-->
+
+<h2>Filtros</h2>
+  <div class="mb-3">
+    <label for="filtroCategoria" class="form-label">Gênero</label>
+    <select class="form-select" id="filtroCategoria">
+      <option selected>Todos</option>
+      <option value="ficcao">Ficção</option>
+      <option value="romance">Romance</option>
+      <option value="filosofia">Filosofia</option>
+      <option value="tecnico">Técnico</option>
+      <option value="biografia">Biografia</option>
+    </select>
+  </div>
+
+  <!-- Filtro por Faixa de Preço -->
+  <div class="mb-3">
+    <label for="filtroPreco" class="form-label">Faixa de Preço</label>
+    <select class="form-select" id="filtroPreco">
+      <option selected>Todas</option>
+      <option value="baixo">Até R$ 30</option>
+      <option value="medio">R$ 30 a R$ 60</option>
+      <option value="alto">Acima de R$ 60</option>
+    </select>
+  </div>
+
+  <!-- Filtro por Avaliação -->
+ <p>Autor</p>
+<form class="mb-3">
+  <input type="text" class="form-control" placeholder="Digite o nome do autor">
+</form>
+
+  <button class="btn btn-primary w-100 mt-3">Aplicar Filtros</button>
+
+
+
 
 </aside>
 
@@ -145,6 +180,63 @@
           </div>
         </div>
       </div>
+       <div class="col">
+        <div class="card h-100">
+          <img src="img/estrangeiro.jpg" class="card-img-top" alt="O Estrangeiro">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">O Estrangeiro</h5>
+            <p class="card-text text-muted mb-1">por Albert Camus</p>
+            <p class="fw-bold mb-3">R$ 29,90</p>
+            <a href="#" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+       <div class="col">
+        <div class="card h-100">
+          <img src="img/marley_e_eu.jpg" class="card-img-top" alt="O Estrangeiro">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Marley e Eu</h5>
+            <p class="card-text text-muted mb-1">por John Grogan</p>
+            <p class="fw-bold mb-3">R$ 29,90</p>
+            <a href="#" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+       <div class="col">
+        <div class="card h-100">
+          <img src="img/vidas_secas.jpg" class="card-img-top" alt="Vidas Secas">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Vidas Secas</h5>
+            <p class="card-text text-muted mb-1">por Graciliano Ramos</p>
+            <p class="fw-bold mb-3">R$ 29,90</p>
+            <a href="#" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/a_cabana.jpg" class="card-img-top" alt="A Cabana">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">A Cabana</h5>
+            <p class="card-text text-muted mb-1"> por William P. Young</p>
+            <p class="fw-bold mb-3">R$ 29,90</p>
+            <a href="#" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+       <div class="col">
+        <div class="card h-100">
+          <img src="img/totem_e_tabu.jpg" class="card-img-top" alt="Totem e Tabu">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">A Cabana</h5>
+            <p class="card-text text-muted mb-1"> por Sigmund Freud</p>
+            <p class="fw-bold mb-3">R$ 29,90</p>
+            <a href="#" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+      
+      
       
 
 
@@ -154,19 +246,6 @@
     <hr class="my-5">
 
     <h2 class="mb-4">Novidades</h2>
-
-        <div class="mb-3">
-      <label for="categoriaFiltro" class="Default select example">Filtrar por Categoria</label>
-       <select class="form-select w-auto" id="categoriaFiltro">
-        <option selected>Todas</option>
-        <option value="ficcao">Ficção</option>
-        <option value="romance">Romance</option>
-        <option value="tecnico">Técnico</option>
-        <option value="educativo">Educativo</option>
-        <option value="filosofia">Filosofia</option>
-      </select>
-    </div>
-
     <div class="row row-cols-1 row-cols-md-4 g-4" id="novidades">
       <div class="col">
         <div class="card h-100">
