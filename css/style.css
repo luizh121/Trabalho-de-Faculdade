@@ -20,9 +20,8 @@ width: 100%;
     margin-top: 0;
 }
 
-.sidebar button:hover{
+.tornar-verde:hover{
     background-color:  #198754;
-
 }
 
 .main-content{
