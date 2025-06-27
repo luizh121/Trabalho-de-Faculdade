@@ -1,3 +1,5 @@
+/*Esse arquivo css é para customizações aplicadas a todas as páginas html*/
+
 .nav-item {
   display: flex;
   flex-direction: column;
