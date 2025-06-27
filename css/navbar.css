@@ -1,0 +1,11 @@
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem; /* Espaço entre ícone e texto */
+  padding-left: 1em;
+}
+
+.addcart{ 
+    margin-left: 560px;
+}
