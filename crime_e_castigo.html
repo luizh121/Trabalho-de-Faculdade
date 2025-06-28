@@ -86,6 +86,8 @@
     </div>
   </div>
 
+  
+
       <div class="col-md-6">
         <h1 class="mb-3">Crime e Castigo</h1>
         <p class="lead">
@@ -95,6 +97,21 @@
         <h3 class="text-success">R$ 39,90</h3>
         <button class="btn btn-primary btn-lg mt-2">Comprar agora</button>
         <button class="btn btn-secondary btn-lg mt-2" onclick="mostrarToast()">Adicionar ao carrinho</button>
+        <div class="d-flex align-items-center gap-3 mt-3">
+
+  <div class="text-uppercase fw-bold">Quantidade</div>
+
+  <div class="input-group quantity-control" style="width: 120px;">
+    <button class="btn btn-outline-secondary" id="decrease">–</button>
+    <input type="text" class="form-control text-center" id="quantity" value="1" readonly>
+    <button class="btn btn-outline-secondary" id="increase">+</button>
+  </div>
+</div>
+
+<div class="mt-2 text-muted">
+  <i class="bi bi-heart"></i> <span class="text-secondary">Adicionar à Lista de desejos</span>
+</div>
+
         <p class="text-muted mt-2">Envio imediato + frete grátis</p>
         
         <!--filosofia pura aqui-->
@@ -157,7 +174,7 @@
 </footer>
 
 
-
+ <!-- mensagem de sucesso ao adicionar ao carrinho -->
   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="toastCarrinho" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
@@ -177,9 +194,7 @@
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
   }
-</script>
-
-<script>
+    // Função para trocar a imagem principal
       
     function trocarImagem(el) {
       const mainImg = document.getElementById('main-image');
@@ -189,6 +204,21 @@
       });
       el.classList.add('active');
     }
+
+  // Função para aumentar e diminuir a quantidade
+    const increaseBtn = document.getElementById('increase');
+  const decreaseBtn = document.getElementById('decrease');
+  const quantityInput = document.getElementById('quantity');
+
+  increaseBtn.addEventListener('click', () => {
+    quantityInput.value = parseInt(quantityInput.value) + 1;
+  });
+
+  decreaseBtn.addEventListener('click', () => {
+    if (parseInt(quantityInput.value) > 1) {
+      quantityInput.value = parseInt(quantityInput.value) - 1;
+    }
+  });
   </script>
 </body>
 </html>
