@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Template</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0px;
+            padding: 20px;
+            color: #136394;
+        }
+
+        .container {
+            max-width: 989px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(240, 240, 240, 0.1);
+        }
+
+        h1 {
+            color: #4596e7;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        .purchased-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .item-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-card img {
+            width: 60%;
+            height: 300px; /* Altura fixa para as imagens */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            display: block; /* Remove espaços extras abaixo da imagem */
+            
+        }
+
+        .item-info {
+            padding: 15px;
+            flex-grow: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Espaço entre título, preço e botões */
+        }
+
+        .item-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2a82da;
+            font-size: 1.2em;
+        }
+
+        .item-info p {
+            margin-bottom: 15px;
+            color: #000000;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .item-date {
+            font-size: 0.85em;
+            color: #0f0f0f;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .btn-reorder {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+            box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
+        }
+
+        .btn-reorder:hover {
+            background-color: #0056b3;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: #000000;
+            font-size: 1.1em;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px dashed #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionado ao carrinho</h1>
+
+        <div class="purchased-items">
+            <div class="item-card">
+                <img src="img/crime_e_castigo.jpg" alt="Imagem do Produto A">
+                <div class="item-info">
+                    <h3>Crime e castigo</h3>
+                    <p class="Autor">Por Fiódor Dostoiévski</p>
+                    <span class="price">R$ 39,90</span>
+                    <a href="#" class="btn-reorder">Comprar</a>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/macunaima.jpg" alt="imagem do Produto B">
+                <div class="item-info">
+                    <h3>Manucaíma</h3>
+                    <p class="Autor">Por Mario de Andrade</p>
+                    <span class="price">R$ 29,90</span>
+                    <a href="#" class="btn-reorder">Comprar</a>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/eccehomo.jpg" alt="Imagem do Produto C">
+                <div class="item-info">
+                    <h3>Eccehomo</h3>
+                    <p class="Autor">Por Friedrich Nietzche</p>
+                    <span class="price">R$ 29,90</span>
+                    <a href="#" class="btn-reorder">Comprar</a>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/estrangeiro.jpg" alt="Imagem do Produto D">
+                <div class="item-info">
+                    <h3>Estrangeiro</h3>
+                    <p class="Autor">Por Albert Camus</p>
+                    <span class="price">R$ 29,90</span>
+                    <a href="#" class="btn-reorder">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+</body>
+</html>
