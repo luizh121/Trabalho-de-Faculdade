@@ -3,172 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/carrinho.css">
     <title>Carrinho - Template</title>
-    <style>
-        /* Estilos CSS */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            margin: 0px;
-            padding: 20px;
-            color: #136394;
-        }
 
-        .container {
-            max-width: 989px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(240, 240, 240, 0.1);
-        }
-
-        h1 {
-            color: #4596e7;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.2em;
-        }
-
-        .purchased-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .item-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease-in-out;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .item-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .item-card img {
-            width: 60%;
-            height: 300px; /* Altura fixa para as imagens */
-            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-            display: block; /* Remove espaços extras abaixo da imagem */
-            
-        }
-
-        .item-info {
-            padding: 15px;
-            flex-grow: 1; /* Permite que o conteúdo ocupe o espaço disponível */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Espaço entre título, preço e botões */
-        }
-
-        .item-info h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #2a82da;
-            font-size: 1.2em;
-        }
-
-        .item-info p {
-            margin-bottom: 15px;
-            color: #000000;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        .item-date {
-            font-size: 0.85em;
-            color: #0f0f0f;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 15px;
-        }
-
-        .btn-reorder {
-            display: block;
-            width: 100%;
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.2s ease;
-            box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
-        }
-
-        .btn-reorder:hover {
-            background-color: #0056b3;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 50px;
-            color: #000000;
-            font-size: 1.1em;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            border: 1px dashed #ddd;
-        }
-    </style>
 </head>
 <body>
+
+ <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand" href="index.html">Navbar scroll</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+         <li class="nav-item d-flex flex-column align-items-center">
+            <img src="img/home.svg" alt="home">
+            <a class="nav-link active  p-0 mt-1"  href="index.html" aria-disabled="true">Home</a>
+          </li>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <img src="img/settings.svg" alt="configurações">
+            <a class="nav-link active p-0 mt-1" href="#">Config.</a>
+          </li>
+          <li class="nav-item dropdown d-flex flex-column align-items-center">
+            <img src="img/sobre.svg" alt="Sobre">
+            <a class="nav-link dropdown-toggle active p-0 mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sobre
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <img src="img/login.svg" alt="login">
+            <a class="nav-link active  p-0 mt-1"  href="#" aria-disabled="true">Login</a>
+          </li>
+           <li class="nav-item d-flex flex-column align-items-center addcart">
+            <img src="img/addcart.svg" alt="carrinho">
+            <a class="nav-link active  p-0 mt-1"  href="carrinho.html" aria-disabled="true">Carrinho</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
     <div class="container">
         <h1>Adicionado ao carrinho</h1>
 
-        <div class="purchased-items">
-            <div class="item-card">
-                <img src="img/crime_e_castigo.jpg" alt="Imagem do Produto A">
-                <div class="item-info">
-                    <h3>Crime e castigo</h3>
-                    <p class="Autor">Por Fiódor Dostoiévski</p>
-                    <span class="price">R$ 39,90</span>
-                    <a href="#" class="btn-reorder">Comprar</a>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <img src="img/macunaima.jpg" alt="imagem do Produto B">
-                <div class="item-info">
-                    <h3>Manucaíma</h3>
-                    <p class="Autor">Por Mario de Andrade</p>
-                    <span class="price">R$ 29,90</span>
-                    <a href="#" class="btn-reorder">Comprar</a>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <img src="img/eccehomo.jpg" alt="Imagem do Produto C">
-                <div class="item-info">
-                    <h3>Eccehomo</h3>
-                    <p class="Autor">Por Friedrich Nietzche</p>
-                    <span class="price">R$ 29,90</span>
-                    <a href="#" class="btn-reorder">Comprar</a>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <img src="img/estrangeiro.jpg" alt="Imagem do Produto D">
-                <div class="item-info">
-                    <h3>Estrangeiro</h3>
-                    <p class="Autor">Por Albert Camus</p>
-                    <span class="price">R$ 29,90</span>
-                    <a href="#" class="btn-reorder">Comprar</a>
-                </div>
-            </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+        <div class="card h-100">
+          <img src="img/crime_e_castigo.jpg" class="card-img-top" alt="Crime e Castigo">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Crime e Castigo</h5>
+            <p class="card-text text-muted mb-1">por Fiódor Dostoiévski</p>
+            <p class="fw-bold mb-3">R$ 39,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
         </div>
-
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/macunaima.jpg" class="card-img-top" alt="Manucaíma">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Manucaíma</h5>
+            <p class="card-text text-muted mb-1">por Mario de Andrade</p>
+            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
         </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/eccehomo.jpg" class="card-img-top" alt="Ecce Homo">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Ecce Homo</h5>
+            <p class="card-text text-muted mb-1">por Friedrich Nietzche</p>
+            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
 </body>
 </html>
