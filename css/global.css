@@ -17,5 +17,13 @@
     height: 24px;
   }
 
+.tornar-verde:hover{
+    background-color:  #198754;
+}
+
+.arredondar-botão .btn{
+    border-radius: 15px;
+}
+
 
 
