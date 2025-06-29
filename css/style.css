@@ -29,6 +29,23 @@ width: 100%;
     padding: 20px;
 }
 
+.card{
+    width: 12rem; 
+}
+
+.card-img-top{
+  height: 200px;
+  object-fit: cover; 
+} /*Uniformiza o tamanho das imagens presentes nos cards*/
+
+.card-img-top:hover{
+    object-fit: contain;
+} /*Ao passar o mouse em um card, faz com que a imagem completa seja mostrada, independente de suas proporções.*/
+
+.card-title{
+  text-align: center;
+} 
+
 
 
 
