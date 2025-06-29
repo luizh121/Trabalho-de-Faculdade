@@ -20,10 +20,6 @@ width: 100%;
     margin-top: 0;
 }
 
-.tornar-verde:hover{
-    background-color:  #198754;
-}
-
 .main-content{
     margin-left: 20px; /* Espaço para a sidebar */
     padding: 20px;
