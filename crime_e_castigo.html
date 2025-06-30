@@ -8,9 +8,9 @@
      <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/crime_e_castigo.css">
 </head>
-<body>
+<body data-bs-theme="light">
     <!-- Navbar -->
- <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       
       <a class="navbar-brand" href="index.html">Navbar scroll</a>
@@ -25,7 +25,7 @@
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/settings.svg" alt="configurações">
-            <a class="nav-link active p-0 mt-1" href="#">Config.</a>
+            <a class="nav-link active p-0 mt-1" href="#">Config</a>
           </li>
           <li class="nav-item dropdown d-flex flex-column align-items-center">
             <img src="img/sobre.svg" alt="Sobre">
@@ -43,9 +43,18 @@
             <img src="img/login.svg" alt="login">
             <a class="nav-link active  p-0 mt-1"  href="#" aria-disabled="true">Login</a>
           </li>
-           <li class="nav-item d-flex flex-column align-items-center addcart">
+           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/addcart.svg" alt="carrinho">
             <a class="nav-link active  p-0 mt-1"  href="carrinho.html" aria-disabled="true">Carrinho</a>
+<<<<<<< HEAD
+=======
+          </li>
+          <li class="modo">
+            <a id="toggle-theme" class="btn btn-outline-secondary ms-3">
+              Modo
+              <img src="img/modo_claro.svg" class="theme-icon" data-light="img/modo_claro.svg" data-dark="img/modo_escuro.svg">
+            </a>
+>>>>>>> 2392c981d477452dc746c74874363bcb5ca2d457
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -95,17 +104,17 @@
           pela primeira vez em 1866. A obra é considerada um dos maiores clássicos da literatura mundial.
         </p>
         <h3 class="text-success">R$ 39,90</h3>
-        <button class="btn btn-primary btn-lg mt-2">Comprar agora</button>
+        <button class="btn btn-primary btn-lg mt-2 tornar-verde">Comprar agora</button>
         <button class="btn btn-secondary btn-lg mt-2" onclick="mostrarToast()">Adicionar ao carrinho</button>
         <div class="d-flex align-items-center gap-3 mt-3">
 
   <div class="text-uppercase fw-bold">Quantidade</div>
 
   <div class="input-group quantity-control" style="width: 120px;">
-    <button class="btn btn-outline-secondary" id="decrease">–</button>
-    <input type="text" class="form-control text-center" id="quantity" value="1" readonly>
-    <button class="btn btn-outline-secondary" id="increase">+</button>
-  </div>
+            <button class="btn btn-outline-secondary btn-decrease">–</button>
+            <input type="text" class="form-control text-center input-quantity" value="1" readonly>
+            <button class="btn btn-outline-secondary btn-increase">+</button>
+         </div>
 </div>
 
 
@@ -173,8 +182,10 @@
 
         <!--Comentários, filosofia pura aqui-->
           <section class="container mt-5">
-  <h3 class="mb-4">Comentários</h3>
+           
+  <h3 class="mb-4 comentario">Comentários</h3>
 
+    <div class="text-dark">
   <div class="mb-4 p-3 border rounded shadow-sm bg-white">
     <h5 class="mb-1">Friedrich Nietzsche</h5>
     <small class="star">★★★★★ - 5 estrelas</small>
@@ -192,11 +203,12 @@
     <small class="star">★☆☆☆☆ - 1 estrelas</small>
     <p class="mt-2 mb-0">Assim como o autor o livro era péssimo. Reflexo da crise da burguesia, insuficiente politicamente!</p>
   </div>
+  </div>
 </section>
 
     </main>
 
-
+<!--Footer-->
    <footer class="bg-dark text-light pt-5 pb-3">
     <div class="container">
       <div class="row">
@@ -244,38 +256,7 @@
 </div>
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-  function mostrarToast() {
-    const toastEl = document.getElementById('toastCarrinho');
-    const toast = new bootstrap.Toast(toastEl);
-    toast.show();
-  }
-    // Função para trocar a imagem principal
-      
-    function trocarImagem(el) {
-      const mainImg = document.getElementById('main-image');
-      mainImg.src = el.src;
-      document.querySelectorAll('.thumb-img').forEach(img => {
-        img.classList.remove('active');
-      });
-      el.classList.add('active');
-    }
-
-  // Função para aumentar e diminuir a quantidade
-    const increaseBtn = document.getElementById('increase');
-  const decreaseBtn = document.getElementById('decrease');
-  const quantityInput = document.getElementById('quantity');
-
-  increaseBtn.addEventListener('click', () => {
-    quantityInput.value = parseInt(quantityInput.value) + 1;
-  });
-
-  decreaseBtn.addEventListener('click', () => {
-    if (parseInt(quantityInput.value) > 1) {
-      quantityInput.value = parseInt(quantityInput.value) - 1;
-    }
-  });
-  </script>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/index.js"></script>
 </body>
 </html>

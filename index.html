@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,9 @@
     
 </head>
 
-<body>
+<body data-bs-theme="light">
 
-
+<!--Navbar-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       
@@ -26,11 +26,11 @@
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
          <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/home.svg" alt="home">
-            <a class="nav-link active  p-0 mt-1"  href="#" aria-disabled="true">Home</a>
+            <a class="nav-link active  p-0 mt-1"  href="index.html" aria-disabled="true">Home</a>
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/settings.svg" alt="configurações">
-            <a class="nav-link active p-0 mt-1" href="#">Config.</a>
+            <a class="nav-link active p-0 mt-1" href="#">Config</a>
           </li>
           <li class="nav-item dropdown d-flex flex-column align-items-center">
             <img src="img/sobre.svg" alt="Sobre">
@@ -48,11 +48,17 @@
             <img src="img/login.svg" alt="login">
             <a class="nav-link active  p-0 mt-1"  href="#" aria-disabled="true">Login</a>
           </li>
-           <li class="nav-item d-flex flex-column align-items-center addcart">
+           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/addcart.svg" alt="carrinho">
             <a class="nav-link active  p-0 mt-1"  href="carrinho.html" aria-disabled="true">Carrinho</a>
           </li>
-      </ul>
+          <li class="modo">
+            <a id="toggle-theme" class="btn btn-outline-secondary ms-3">
+              Modo
+              <img src="img/modo_claro.svg" class="theme-icon" data-light="img/modo_claro.svg" data-dark="img/modo_escuro.svg">
+            </a>
+          </li>
+        </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button class="btn btn-outline-success" type="submit">Buscar</button>
@@ -61,12 +67,9 @@
     </div>
   </nav>
 
- 
-
-
   <header>
 
-      <!--inicio do carousel-->
+      <!--Inicio do carousel-->
       <div id="carouselExampleCaptions" class="carousel slide"> 
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -106,8 +109,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-     <!--fim do carousel-->
-
+  
    </header>
 
 
@@ -116,8 +118,8 @@
 
   <div class="d-flex"> <!--Alinha o sidebar com o conteúdo principal-->
 
-<aside class="sidebar row col-md-3"> <!--Sidebar-->
-
+    <!--Sidebar-->
+   <aside class="sidebar row col-md-3"> 
 <h2>Filtros</h2>
 
  <!--Filtro por Gênero-->
@@ -160,194 +162,219 @@
     <div class="main-content"> 
 
     <h2 class="mb-4">Mais Lidos</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-4" id="mais-lidos">
+    <div class="row row-cols-1 row-cols-md-4 g-4 arredondar-botão" id="mais-lidos">
+
+      <!--livro 1-->
       <div class="col">
         <div class="card h-100">
           <img src="img/crime_e_castigo.jpg" class="card-img-top" alt="Crime e Castigo">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Crime e Castigo</h5>
             <p class="card-text text-muted mb-1">por Fiódor Dostoiévski</p>
-            <p class="fw-bold mb-3">R$ 39,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 39,90<a onclick="mostrarToast()"> <img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
-            
           </div>
         </div>
       </div>
+
+      <!--livro 2-->
       <div class="col">
         <div class="card h-100">
           <img src="img/macunaima.jpg" class="card-img-top" alt="Manucaíma">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Manucaíma</h5>
             <p class="card-text text-muted mb-1">por Mario de Andrade</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+      <!--livro 3-->
       <div class="col">
         <div class="card h-100">
           <img src="img/eccehomo.jpg" class="card-img-top" alt="Ecce Homo">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Ecce Homo</h5>
             <p class="card-text text-muted mb-1">por Friedrich Nietzche</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
-             <!-- <a href="#" class="btn btn-outline-primary mt-auto">Adicionar ao Carrinho</a> -->
           </div>
         </div>
       </div>
+
+      <!--livro 4-->
        <div class="col">
         <div class="card h-100">
           <img src="img/estrangeiro.jpg" class="card-img-top" alt="O Estrangeiro">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">O Estrangeiro</h5>
             <p class="card-text text-muted mb-1">por Albert Camus</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+      <!--livro 5-->
        <div class="col">
         <div class="card h-100">
           <img src="img/marley_e_eu.jpg" class="card-img-top" alt="O Estrangeiro">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Marley e Eu</h5>
             <p class="card-text text-muted mb-1">por John Grogan</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+      <!--livro 6-->
        <div class="col">
         <div class="card h-100">
           <img src="img/vidas_secas.jpg" class="card-img-top" alt="Vidas Secas">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Vidas Secas</h5>
             <p class="card-text text-muted mb-1">por Graciliano Ramos</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+      <!--livro 7-->
       <div class="col">
         <div class="card h-100">
           <img src="img/a_cabana.jpg" class="card-img-top" alt="A Cabana">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">A Cabana</h5>
             <p class="card-text text-muted mb-1"> por William P. Young</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+      <!--livro 8-->
        <div class="col">
         <div class="card h-100">
           <img src="img/totem_e_tabu.jpg" class="card-img-top" alt="Totem e Tabu">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Totem e Tabu</h5>
             <p class="card-text text-muted mb-1"> por Sigmund Freud</p>
-            <p class="fw-bold mb-3">R$ 29,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 29,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
       
-      
-      
-
-
-    
     </div>
 
     <hr class="my-5">
 
     <h2 class="mb-4">Novidades</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-4" id="novidades">
+    <div class="row row-cols-1 row-cols-md-4 g-4 arredondar-botão " id="novidades">
 
+         <!--livro 9-->
         <div class="col">
         <div class="card h-100">
           <img src="img/tormenta.jpg" class="card-img-top" alt="Tormenta">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Tormenta</h5>
             <p class="card-text text-muted mb-1">por C.J. Tudor</p>
-            <p class="fw-bold mb-3">R$ 45,00<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 45,00<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+        <!--livro 10-->
       <div class="col">
         <div class="card h-100">
           <img src="img/o_detento.jpg" class="card-img-top" alt="O Detento">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">O Detento</h5>
             <p class="card-text text-muted mb-1">por Freida McFadden</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+        <!--livro 11-->
       <div class="col">
         <div class="card h-100">
           <img src="img/sem_coracao.jpg" class="card-img-top" alt="Sem Coração">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Sem Coração</h5>
             <p class="card-text text-muted mb-1">por Elsie Silver</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+
+        <!--livro 12-->
       <div class="col">
         <div class="card h-100">
           <img src="img/nunca_minta.jpg" class="card-img-top" alt="Nunca Minta">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Nunca Minta</h5>
             <p class="card-text text-muted mb-1">por Freida McFadden</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+        <!--livro 13-->
       <div class="col">
         <div class="card h-100">
           <img src="img/conflitos_de_sangue.jpg" class="card-img-top" alt="Conflitos de Sangue">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Conflitos de Sangue</h5>
             <p class="card-text text-muted mb-1">por Jennifer Lyn Barner</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+        <!--livro 14-->
       <div class="col">
         <div class="card h-100">
           <img src="img/a_carteira.jpg" class="card-img-top" alt="A Carteira">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">A Carteira</h5>
             <p class="card-text text-muted mb-1">por Francesca Giannone</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+          <!--livro 15-->
       <div class="col">
         <div class="card h-100">
           <img src="img/a_dama_da_morte.jpg" class="card-img-top" alt="A Dama da Morte">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">A Dama da Morte</h5>
             <p class="card-text text-muted mb-1">por Kate Quinn</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
       </div>
+
+          <!--livro 16-->
       <div class="col">
         <div class="card h-100">
           <img src="img/a_lei_da_atracao.jpg" class="card-img-top" alt="A Lei da Atração">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">A Lei da Atração</h5>
             <p class="card-text text-muted mb-1">por Michael J. Losier</p>
-            <p class="fw-bold mb-3">R$ 59,90<img src="img/cart.svg" alt="carrinho" class="icone"></p>
+            <p class="fw-bold mb-3">R$ 59,90<a onclick="mostrarToast()"><img src="img/cart.svg" class="theme-icon icone" data-light="img/cart.svg" data-dark="img/cart_dark.svg" alt="carrinho"></a></p>
             <a href="crime_e_castigo.html" class="btn btn-outline-primary mt-auto">Ver detalhes</a>
           </div>
         </div>
@@ -409,7 +436,7 @@
 
 
 
-
+<!--Newsletter-->
  <footer class="bg-dark text-light pt-5 pb-3">
     <div class="container">
       <div class="row">
@@ -449,8 +476,19 @@
   
 </footer>
 
+<!--mensagem de sucesso ao adicionar ao carrinho-->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="toastCarrinho" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Produto adicionado ao carrinho!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+    </div>
+  </div>
+</div>
 
      <script src="js/bootstrap.bundle.js"></script>
+     <script src="js/index.js"></script>
 </body>
 </html>
-

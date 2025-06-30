@@ -1,18 +1,16 @@
 .carousel-item{
-    height: 50em;
+    height: 35em;
 } /* Altura do caroulsel*/
 
 .carousel-item img{
 width: 100%;
-}
-
+} /* Faz com que as ikagens do caroulsel ocupem toda tela*/
 
 .sidebar{
     width: 250px;
     padding: 20px;
     left: 0;
     top: 0;
-    position: flex;
     flex-direction: column;
 }
 
@@ -20,15 +18,12 @@ width: 100%;
     margin-top: 0;
 }
 
-.tornar-verde:hover{
-    background-color:  #198754;
-}
-
 .main-content{
-    margin-left: 20px; /* Espaço para a sidebar */
+    margin-left: 20px; /* Espaço para a sidebar*/
     padding: 20px;
 }
 
+<<<<<<< HEAD
 #carouselDepoimentos {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -47,6 +42,28 @@ width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+=======
+.card{
+    width: 12rem; 
+}
+
+.card-img-top{
+  height: 200px;
+  object-fit: cover; 
+} /*Uniformiza o tamanho das imagens presentes nos cards*/
+
+.card-img-top:hover{
+    object-fit: contain;
+} /*Ao passar o mouse em um card, faz com que a imagem completa seja mostrada, independente de suas proporções.*/
+
+.card-title{
+  text-align: center;
+} 
+
+select{
+    cursor: pointer;
+}
+>>>>>>> 2392c981d477452dc746c74874363bcb5ca2d457
 
 
 

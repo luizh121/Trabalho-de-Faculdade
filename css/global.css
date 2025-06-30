@@ -1,5 +1,4 @@
 /*Esse arquivo css é para customizações aplicadas a todas as páginas html*/
-
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -8,29 +7,41 @@
   padding-left: 1em;
 }
 
-.addcart{ 
-    margin-left: 560px;
-}
-
 .icone{
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
 
-.card{
-    width: 12rem; 
+  .tornar-verde:hover{
+    background-color:  #198754;
 }
 
-.card-img-top{
-  height: 200px;
-  object-fit: cover; 
-} /*Uniformiza o tamanho das imagens presentes nos cards*/
+.arredondar-botão .btn{
+    border-radius: 15px;
+}
 
-.card-img-top:hover{
-    object-fit: contain;
-} /*Ao passar o mouse em um card, faz com que a imagem completa seja mostrada, independente de suas proporções.*/
-
-.card-title{
-  text-align: center;
+#toggle-theme{
+  border-radius: 15px; 
+  position: flex;
 } 
+
+.modo{
+  padding-top: 9px;
+  padding-left: 460px;
+}/*Ajusta o botão para o canto*/
+
+
+body[data-bs-theme="dark"] {
+  background-color: #121212 !important;
+  color: #f1f1f1;
+}
+
+body[data-bs-theme="light"] {
+  background-color: #ffffff !important;
+  color: #000000;
+} /*Garante que o fundo do body mude de acordo com o modo*/
+
+
+
 
