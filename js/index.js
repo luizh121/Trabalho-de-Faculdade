@@ -40,3 +40,27 @@ function mostrarToast() {
     });
   });
 });
+
+//Função para alternar entre tema claro e esuro
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggleThemeBtn = document.getElementById('toggle-theme');
+  const themeIcon = document.querySelector('.theme-icon');
+  const body = document.body;
+
+  // Alternância de tema
+  toggleThemeBtn.addEventListener('click', () => {
+    const isLight = body.getAttribute('data-bs-theme') === 'light';
+    const newTheme = isLight ? 'dark' : 'light';
+
+    // Aplica novo tema
+    body.setAttribute('data-bs-theme', newTheme);
+
+    // Atualiza imagem dos ícones para que se adequem ao modo escuro
+    document.querySelectorAll(".theme-icon").forEach(img => {
+  const novoTema = body.getAttribute("data-bs-theme");
+  const novoSrc = novoTema === "dark" ? img.getAttribute("data-dark") : img.getAttribute("data-light");
+  if (novoSrc) img.setAttribute("src", novoSrc);
+});
+  });
+});
+
