@@ -46,6 +46,9 @@ function mostrarToast() {
   const toggleThemeBtn = document.getElementById('toggle-theme');
   const themeIcon = document.querySelector('.theme-icon');
   const body = document.body;
+  const depoimento = document.getElementById('carouselDepoimentos');
+  const TituloDepoimento = document.getElementById('depoimento-titulo');
+  const DepoimentoBorda = document.getElementById('depoimento');
 
   // Alternância de tema
   toggleThemeBtn.addEventListener('click', () => {
@@ -54,6 +57,12 @@ function mostrarToast() {
 
     // Aplica novo tema
     body.setAttribute('data-bs-theme', newTheme);
+
+       // Muda o depoimento
+    depoimento.classList.toggle('bg-dark');
+    TituloDepoimento.classList.toggle('text-light');
+    DepoimentoBorda.classList.toggle('depoimento-fundo-dark');
+    DepoimentoBorda.classList.toggle('bg-light');
 
     // Atualiza imagem dos ícones para que se adequem ao modo escuro
     document.querySelectorAll(".theme-icon").forEach(img => {
