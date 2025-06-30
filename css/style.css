@@ -29,6 +29,23 @@ width: 100%;
     padding: 20px;
 }
 
+#carouselDepoimentos {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+ 
+.star {
+  color: #f39c12; /* Cor dourada para as estrelas */
+  font-size: 1.2em; /* Tamanho das estrelas */
+}
+
+.carousel-control-prev-icon{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-next-icon{
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 
 
