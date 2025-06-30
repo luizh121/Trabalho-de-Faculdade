@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,10 @@
   <title>Minha Lista de Compras</title>
 
 </head>
-<body>
+<body data-bs-theme="light">
 
     <!--Navbar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       
       <a class="navbar-brand" href="index.html">Navbar scroll</a>
@@ -28,7 +28,7 @@
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/settings.svg" alt="configurações">
-            <a class="nav-link active p-0 mt-1" href="#">Config.</a>
+            <a class="nav-link active p-0 mt-1" href="#">Config</a>
           </li>
           <li class="nav-item dropdown d-flex flex-column align-items-center">
             <img src="img/sobre.svg" alt="Sobre">
@@ -46,9 +46,15 @@
             <img src="img/login.svg" alt="login">
             <a class="nav-link active  p-0 mt-1"  href="#" aria-disabled="true">Login</a>
           </li>
-           <li class="nav-item d-flex flex-column align-items-center addcart">
+           <li class="nav-item d-flex flex-column align-items-center">
             <img src="img/addcart.svg" alt="carrinho">
             <a class="nav-link active  p-0 mt-1"  href="carrinho.html" aria-disabled="true">Carrinho</a>
+          </li>
+          <li class="modo">
+            <a id="toggle-theme" class="btn btn-outline-secondary ms-3">
+              Modo
+              <img src="img/modo_claro.svg" class="theme-icon" data-light="img/modo_claro.svg" data-dark="img/modo_escuro.svg">
+            </a>
           </li>
         </ul>
         <form class="d-flex" role="search">
