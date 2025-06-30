@@ -23,7 +23,7 @@ width: 100%;
     padding: 20px;
 }
 
-<<<<<<< HEAD
+
 #carouselDepoimentos {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -42,7 +42,6 @@ width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-=======
 .card{
     width: 12rem; 
 }
@@ -60,10 +59,6 @@ width: 100%;
   text-align: center;
 } 
 
-select{
-    cursor: pointer;
-}
->>>>>>> 2392c981d477452dc746c74874363bcb5ca2d457
 
 
 
