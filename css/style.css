@@ -59,6 +59,10 @@ width: 100%;
   text-align: center;
 } 
 
+.depoimento-fundo-dark{
+    background-color: rgb(0, 0, 0);
+} /*Cor das bordas do depoimento no modo escuro*/
+
 
 
 
