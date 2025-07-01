@@ -28,7 +28,7 @@ Este repositório contém o projeto do trabalho escolar realizado como parte dos
    npm start
    ```
 
-# Estrutura de pastas e decisões de design
+# Estrutura de pastas 
 
 ```
 /
@@ -40,6 +40,7 @@ Este repositório contém o projeto do trabalho escolar realizado como parte dos
 ├── crime_e_castigo.html  # Página de detalhes do livro
 ├── index.html      # Página inicial com navbar, carousel e listagem de livros
 └── README.md       # Este arquivo
+```
 
 ## Escolhas de Design
 
